@@ -5,6 +5,7 @@ import { RouterModule, Routes} from '@angular/router';
 import { AppComponent } from './app.component';
 import { SearchRecipeComponent } from './search-recipe/search-recipe.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { AddIngridientComponent } from './add-ingridient/add-ingridient.component';
 
 const routesConfig: Routes = [
   {path: '', redirectTo: 'search', pathMatch: 'full'},
@@ -22,6 +23,8 @@ const routerModule = RouterModule.forRoot(routesConfig, {
     AppComponent,
     SearchRecipeComponent,
     NavigationBarComponent
+    AppComponent,
+    AddIngridientComponent
   ],
   imports: [
     BrowserModule,
