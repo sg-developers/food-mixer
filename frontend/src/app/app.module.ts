@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { SearchRecipeComponent } from './search-recipe/search-recipe.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { AddIngridientComponent } from './add-ingridient/add-ingridient.component';
+import { BrowseDishesComponent } from './browse-dishes/browse-dishes.component';
 import { DishComponent } from './dish/dish.component';
 
 const routesConfig: Routes = [
   {path: '', redirectTo: 'search', pathMatch: 'full'},
   {path: 'search', component: SearchRecipeComponent},
+  {path: 'browse', component: BrowseDishesComponent},
   {path: '**', redirectTo: 'search', pathMatch: 'full'}
 ];
 
@@ -26,7 +28,8 @@ const routerModule = RouterModule.forRoot(routesConfig, {
     NavigationBarComponent,
     AppComponent,
     AddIngridientComponent,
-    DishComponent
+    DishComponent,
+    BrowseDishesComponent
   ],
   imports: [
     BrowserModule,

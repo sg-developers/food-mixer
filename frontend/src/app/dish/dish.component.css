@@ -1,6 +1,7 @@
 .card {
   padding: 12px;
   margin: .75rem;
+  display: inline-block;
 }
 .card-title {
   margin-bottom: .75rem;
