@@ -22,7 +22,7 @@ const routerModule = RouterModule.forRoot(routesConfig, {
   declarations: [
     AppComponent,
     SearchRecipeComponent,
-    NavigationBarComponent
+    NavigationBarComponent,
     AppComponent,
     AddIngridientComponent
   ],
