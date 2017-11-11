@@ -8,6 +8,7 @@ import { SearchRecipeComponent } from './search-recipe/search-recipe.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { AddIngredientComponent } from './add-ingredient/add-ingredient.component';
 import { IngredientListComponent } from './ingredient-list/ingredient-list.component';
+import { DishComponent } from './dish/dish.component';
 
 import { IngredientService } from './services/ingredient-service.service';
 
@@ -29,7 +30,8 @@ const routerModule = RouterModule.forRoot(routesConfig, {
     NavigationBarComponent,
     AppComponent,
     AddIngredientComponent,
-    IngredientListComponent
+    IngredientListComponent,
+    DishComponent
   ],
   imports: [
     BrowserModule,
