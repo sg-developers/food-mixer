@@ -7,8 +7,17 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class BrowseDishesComponent implements OnInit {
+  dishes: Array<any>
 
-  constructor() { }
+  constructor() {
+    this.dishes = [
+      {name: 'Pierogi', ingridients: ['Mąka', 'Syr', 'Woda']},
+      {name: 'Schabowy', ingridients: ['Mienso', 'Zimnioki', 'Kiszone ogurasy']},
+      {name: 'Mielony', ingridients: ['Miensko', 'Kapusta', 'Pyry']},
+      {name: 'Rosół', ingridients: ['Woda', 'Woda', 'Kostka rosolowa']},
+      {name: 'Pierogi', ingridients: ['Mąka', 'Syr', 'Woda']}
+    ]
+  }
 
   ngOnInit() {
   }

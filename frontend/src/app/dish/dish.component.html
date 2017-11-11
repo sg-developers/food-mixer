@@ -1,10 +1,10 @@
 <div class="card text-center col-md-4" style="width: 20rem;">
   <div class="card-block">
-    <h4 class="card-title">Pierogi róskie XD</h4>
+    <h4 class="card-title">{{dish.name}}</h4>
       <ul class="list-group list-group-flush card-list">
-        <li class="list-group-item">Monka</li>
-        <li class="list-group-item">Syr</li>
-        <li class="list-group-item">Woda</li>
+        <li *ngFor="let ingridient of dish.ingridients; let i = index" class="list-group-item">
+          {{ingridient}}
+        </li>
       </ul>
     <a href="#" class="btn btn-primary">Details</a>
   </div>
