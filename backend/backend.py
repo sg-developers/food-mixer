@@ -1,10 +1,10 @@
 from flask import Flask
-
-app = Flask(__name__)
-
 import os
 import lib.csv_to_json
 import json
+
+app = Flask(__name__)
+
 
 @app.route('/api/v1/dishes')
 def hello_world():
