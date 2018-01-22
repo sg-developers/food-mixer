@@ -1,0 +1,15 @@
+---
+- hosts: all
+  sudo: true
+  tasks:
+    - name: Install pip3
+      apt:
+        name: python3-pip
+        state: present
+        update_cache: yes
+    - name: Install requirements
+      pip:
+        requirements: "/srv/mixer-api/requirements.txt"
+        executable: pip3
+    - name: run server
+      command: gunicorn backend:app -D -b 0.0.0.0:8000 chdir=/srv/mixer-api
