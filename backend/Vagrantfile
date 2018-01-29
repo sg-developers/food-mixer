@@ -1,15 +1,13 @@
 # vi: set ft=ruby :
 
-VAGRANTFILE_API_VERSION = "2"
+VAGRANTFILE_API_VERSION = '2'.freeze
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = 'ubuntu/trusty64'
+  config.vm.synced_folder '.', '/srv/mixer-api'
 
-  config.vm.box = "ubuntu/trusty64"
-  config.vm.synced_folder ".", "/srv/mixer-api"
-
-  config.vm.network "forwarded_port", guest: 8000, host: 8000
+  config.vm.network 'forwarded_port', guest: 8000, host: 8000
   config.vm.provision :ansible do |ansible|
-    ansible.playbook = "playbook.yml"
+    ansible.playbook = 'playbook.yml'
   end
-
 end
