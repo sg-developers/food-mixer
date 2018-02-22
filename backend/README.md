@@ -7,3 +7,10 @@ To install dependencies activate virtualenv by typing `. ./venv/bin/activate` an
 
 run `export FLASK_APP=backend.py`
 run `flask run`
+
+## Vagrant Running
+
+* Make sure you have vagrant and Ansible installed on your host machine
+* Run `vagrant up`
+
+> `vagrant reload` let's you relaunch your env if you made changes
